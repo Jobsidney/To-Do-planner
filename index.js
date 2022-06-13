@@ -1,7 +1,9 @@
-document.querySelector('form').addEventListener('submit',(e)=>{
+let form=document.querySelector('form')
+form.addEventListener('submit',(e)=>{
     console.log(e.target.todo.value)
     handleTask(e.target.todo.value)
-    e.preventDefault()
+    e.preventDefault();
+    form.reset()
 })
 
 function handleTask(work){

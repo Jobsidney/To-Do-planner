@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to left, #753682 0%, #bf2e34 100%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 20px;
+}
+
+header,
+form {
+    min-height: 20vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+form input,
+form button {
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    /* background: white; */
+}
+input[type="submit"]{
+    background:rgb(82, 80, 80);
+}
+
+form button {
+    color: #753682;
+    background-color: white;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 4.5rem;
+}
+
+.do-list {
+    min-width: 20%;
+    list-style: none;
+}
+
+.todo {
+    background: white;
+    color: black;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+    /* specifies the transition of the toggle cass"completed" */
+}
+
+.todo li {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button {
+    background: #bf2e34;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.todo-Item {
+    padding: 0 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+
+/* style the toggle */
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(10rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+
+/* Remove the select styles first */
+
+select {
+    -webkit-apppearnce: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #753682;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+
+/* Add an arrow next to the select options */
+
+.select::after {
+    content: "\25BC";
+    /* CSS ENTITIES */
+    background: #bf2e34;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    transition: all 0.7s ease-in;
+}
+
+.select:hover::after {
+    color: #bf2e34;
+    background: white;
+}
+#todoDiv{
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}

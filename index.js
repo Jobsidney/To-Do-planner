@@ -2,8 +2,19 @@ let form=document.querySelector('form')
 form.addEventListener('submit',(e)=>{
     console.log(e.target.todo.value)
     handleTask(e.target.todo.value)
+
     e.preventDefault();
-    form.reset()
+
+
+    //PUSH DATA TO DB
+    // const dataB={title: e.target.todo.value,
+    // content:e.target.descr.value}
+    // function postTask(obj){
+    //     fetch('http://localhost:3000/articles',{method: 'POST',headers: {'Content-Type': 'application/json'},
+    //     body: JSON.stringify(obj)})
+    // }
+    // postTask(dataB);
+    // form.reset()
 })
 
 function handleTask(work){
